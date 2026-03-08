@@ -2036,7 +2036,7 @@ body::after {
   column-gap: 0.5rem;
   justify-items: start;
 }
-.filter__checkboxes.--showmore-active .filter__btn-more {
+.filter__checkboxes .filter__btn-more {
   margin-top: 0.5rem;
 }
 .filter__checkbox .checkbox__label {
@@ -3648,7 +3648,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .intro-slider__slide {
   border-radius: 0.75rem;
   position: relative;
-  aspect-ratio: 900/480;
   overflow: hidden;
 }
 .intro-slider__slide img {
@@ -3693,7 +3692,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 .banner-intro {
   position: relative;
-  aspect-ratio: 456/230;
   border-radius: 0.75rem;
   overflow: hidden;
 }
@@ -4623,9 +4621,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .intro-slider__content {
     padding: 3rem 6rem;
   }
-  .banner-intro {
-    aspect-ratio: 312/158;
-  }
   .banner-intro__content {
     padding: 1rem;
   }
@@ -4915,12 +4910,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .intro__body {
     grid-template-columns: 1fr;
   }
+  .intro-slider__slide {
+    min-height: 25rem;
+  }
   .intro-slider__content {
     padding: 2rem;
     height: 100%;
   }
   .intro-slider__content :last-child {
     margin-top: auto;
+  }
+  .banner-intro {
+    max-height: 24.0625rem;
   }
   .intro-about__images {
     grid-row: 2;
@@ -5244,9 +5245,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .intro-slider__content h1:not(:last-child) {
     margin-bottom: 0.25rem;
   }
-  .banner-intro {
-    aspect-ratio: 328/165;
-  }
   .intro-about {
     padding-block: 1rem;
   }
@@ -5372,7 +5370,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding: 0;
   }
   .intro-slider__slide {
-    aspect-ratio: 328/216;
+    min-height: 17.25rem;
   }
   .intro-slider__slide img {
     object-position: left center;
@@ -5420,6 +5418,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .about__brands:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 28.125em){
+  .intro-slider__slide {
+    min-height: 13.5rem;
   }
 }
 @media (width <= 22.5em){
