@@ -709,6 +709,9 @@ textarea.input {
 .form__group--radio {
   align-items: flex-start;
 }
+.form__group.options {
+  align-items: flex-start;
+}
 .form__field {
   flex: 1;
 }
