@@ -510,7 +510,7 @@ document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menu
 function headerScroll() {
   const header = document.querySelector("[data-fls-header-scroll]");
   const headerShow = header.hasAttribute("data-fls-header-scroll-show");
-  const headerShowTimer = header.dataset.flsHeaderScrollShow ? header.dataset.flsHeaderScrollShow : 500;
+  const headerShowTimer = header.dataset.flsHeaderScrollShow ? header.dataset.flsHeaderScrollShow : 1e5;
   const startPoint = header.dataset.flsHeaderScroll ? header.dataset.flsHeaderScroll : 1;
   let scrollDirection = 0;
   let timer;
@@ -3464,6 +3464,52 @@ function formInit() {
   });
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+function addToCart() {
+  document.addEventListener("click", addToCartAction);
+  function addToCartAction(e) {
+    const targetElement = e.target;
+    if (targetElement.closest("[data-fls-addtocart-button]")) {
+      let addToCart2 = document.querySelector("[data-fls-addtocart]");
+      const addToCartButton = targetElement.closest("[data-fls-addtocart-button]");
+      const addToCartProduct = addToCartButton.closest("[data-fls-addtocart-product]");
+      if (addToCartProduct) {
+        let addToCartQuantity = addToCartProduct.querySelector("[data-fls-addtocart-quantity]");
+        addToCartQuantity = addToCartQuantity ? +addToCartQuantity.value : 1;
+        const addToCartImage = addToCartProduct.querySelector("[data-fls-addtocart-image]");
+        const flyImgSpeed = +addToCartImage.dataset.flsAddtocartImage || 500;
+        addToCartImage ? addToCartImageFly(addToCartImage, addToCart2, flyImgSpeed) : null;
+        setTimeout(() => {
+          addToCart2.innerHTML = +addToCart2.innerHTML + addToCartQuantity;
+        }, addToCartImage ? flyImgSpeed : 0);
+      } else {
+        addToCart2.innerHTML = +addToCart2.innerHTML + 1;
+      }
+    }
+  }
+  function addToCartImageFly(addToCartImage, addToCart2, flyImgSpeed) {
+    const flyImg = document.createElement("img");
+    flyImg.src = addToCartImage.src;
+    flyImg.style.cssText = `
+			position: absolute;
+			left: ${addToCartImage.getBoundingClientRect().left + scrollX}px;
+			top: ${addToCartImage.getBoundingClientRect().top + scrollY}px;
+			width: ${addToCartImage.offsetWidth}px;
+			transition: all ${flyImgSpeed}ms;
+			z-index:51;
+		`;
+    document.body.insertAdjacentElement("beforeend", flyImg);
+    flyImg.style.left = `${addToCart2.getBoundingClientRect().left + scrollX}px`;
+    flyImg.style.top = `${addToCart2.getBoundingClientRect().top + scrollY}px`;
+    flyImg.style.width = 0;
+    flyImg.style.opacity = `0`;
+    addToCart2.classList.add("add-goods");
+    setTimeout(() => {
+      flyImg.remove();
+      addToCart2.classList.remove("add-goods");
+    }, flyImgSpeed);
+  }
+}
+document.querySelector("[data-fls-addtocart]") ? window.addEventListener("load", addToCart) : null;
 class SelectConstructor {
   constructor(props, data = null) {
     let defaultConfig = {
@@ -10816,6 +10862,7 @@ function initSliders() {
       slidesPerView: 1,
       spaceBetween: 16,
       speed: 300,
+      loop: true,
       navigation: {
         prevEl: ".swipe-button-prev",
         nextEl: ".swipe-button-next"
@@ -10886,6 +10933,7 @@ function initSliders() {
       slidesPerView: 1,
       spaceBetween: 8,
       speed: 300,
+      loop: true,
       navigation: {
         prevEl: ".swipe-button-prev",
         nextEl: ".swipe-button-next"
@@ -10912,6 +10960,7 @@ function initSliders() {
       watchSlidesProgress: true,
       spaceBetween: 10,
       enabled: false,
+      loop: true,
       breakpoints: {
         639.98: {
           enabled: true
@@ -10922,6 +10971,7 @@ function initSliders() {
       modules: [Navigation, Thumb],
       slidesPerView: 1,
       speed: 500,
+      loop: true,
       watchSlidesProgress: true,
       autoHeight: true,
       navigation: {
@@ -13244,6 +13294,20 @@ function initGallery() {
   }
   if (document.querySelector("[data-fls-gallery]")) {
     new lightGallery(document.querySelector("[data-fls-gallery].gallery-newscard"), {
+      // plugins: [lgZoom],
+      licenseKey: KEY,
+      selector: "a",
+      speed: 500,
+      download: false,
+      mobileSettings: {
+        controls: false,
+        showCloseIcon: true
+      },
+      subHtmlSelectorRelative: true
+    });
+  }
+  if (document.querySelector("[data-fls-gallery]")) {
+    new lightGallery(document.querySelector("[data-fls-gallery].docs-licenses"), {
       // plugins: [lgZoom],
       licenseKey: KEY,
       selector: "a",
