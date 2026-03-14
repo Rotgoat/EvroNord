@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Евронорд :: Главная</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1772903790560"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1772903790560">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1773506486759"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1773506486759">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header="" data-fls-header-scroll="" class="header">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
 				<div class="header__top top-header mobile-menu">
 					<div class="top-header__container">
 						<ul class="top-header__list">
@@ -21,7 +21,7 @@
 								<a href="cooperation" class="top-header__link">Сотрудничество</a>
 							</li>
 							<li class="top-header__item">
-								<a href="#" class="top-header__link">Покупателям</a>
+								<a href="portfolio" class="top-header__link">Портфолио</a>
 							</li>
 							<li class="top-header__item">
 								<a href="delivery" class="top-header__link">Доставка и оплата</a>
@@ -62,8 +62,13 @@
 								<a class="header-phone__num" href="tel:+375291235667">+375 (29) 123-56-67</a>
 								<div class="header-phone__time">Пн–Пт. 8:00–20:00</div>
 							</div>
-							<a href="#" title="Вход/Регистрация" class="main-header__actions-btn --icon-user" data-fls-popup-link="popup-signin"></a>
-							<a href="cart" class="main-header__actions-btn --icon-cart"></a>
+							<!-- добавить класс _logging если юзер зойден -->
+							<a href="#" title="Вход/Регистрация" class="main-header__actions-btn user-btn --icon-user _loggin" data-fls-popup-link="popup-signin">
+								<span class="user-btn__name">В</span>
+							</a>
+							<a href="cart" class="main-header__actions-btn cart-btn --icon-cart">
+								<span class="cart-btn__quantity" data-fls-addtocart="">2</span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -123,27 +128,27 @@
 							<div data-fls-previewslider="" data-fls-slider="" class="previewslider swiper">
 								<div class="previewslider__wrapper swiper-wrapper">
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
@@ -163,39 +168,39 @@
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 								</div>
@@ -215,27 +220,27 @@
 							<div data-fls-previewslider="" data-fls-slider="" class="previewslider swiper">
 								<div class="previewslider__wrapper swiper-wrapper">
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
@@ -255,39 +260,39 @@
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 								</div>
@@ -307,27 +312,27 @@
 							<div data-fls-previewslider="" data-fls-slider="" class="previewslider swiper">
 								<div class="previewslider__wrapper swiper-wrapper">
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
@@ -347,39 +352,39 @@
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 									<div class="previewslider__slide swiper-slide">
-										<article data-fls-catalogcard="" class="catalog-card">
+										<article data-fls-catalogcard="" class="catalog-card" data-fls-addtocart-product="">
 											<a href="product" class="catalog-card__image">
-												<img width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
+												<img data-fls-addtocart-image="" width="150" height="150" src="./assets/img/catalog/01.jpg" alt="Image">
 											</a>
 											<a href="product" class="catalog-card__title">Оконная фурнитура фурнитура фурнитура фурнитура</a>
 											<div class="catalog-card__price">
 												<span>456,80 BYN</span>
 											</div>
-											<button type="button" class="catalog-card__btn btn btn--fw">В корзину</button>
+											<button type="button" class="catalog-card__btn btn btn--fw" data-fls-addtocart-button="">В корзину</button>
 										</article>
 									</div>
 								</div>
@@ -489,6 +494,9 @@
 						<ul class="footer__main-list">
 							<div class="footer__main-list-title">Каталог</div>
 							<li class="footer__main-list-item">
+								<a href="brandspage" class="footer__main-list-link">Бренды</a>
+							</li>
+							<li class="footer__main-list-item">
 								<a href="category" class="footer__main-list-link">Для окон</a>
 							</li>
 							<li class="footer__main-list-item">
@@ -501,10 +509,10 @@
 						<ul class="footer__main-list">
 							<div class="footer__main-list-title">Клиентам</div>
 							<li class="footer__main-list-item">
-								<a href="delivery" class="footer__main-list-link">Доставка</a>
+								<a href="delivery" class="footer__main-list-link">Доставка и оплата</a>
 							</li>
 							<li class="footer__main-list-item">
-								<a href="#" class="footer__main-list-link">Оплата</a>
+								<a href="portfolio" class="footer__main-list-link">Портфолио</a>
 							</li>
 							<li class="footer__main-list-item">
 								<a href="documentation" class="footer__main-list-link">Документация</a>
@@ -519,10 +527,13 @@
 								<a href="about" class="footer__main-list-link">О нас</a>
 							</li>
 							<li class="footer__main-list-item">
-								<a href="#" class="footer__main-list-link">Наша продукция</a>
+								<a href="cooperation" class="footer__main-list-link">Сотрудничество</a>
 							</li>
 							<li class="footer__main-list-item">
-								<a href="cooperation" class="footer__main-list-link">Сотрудничество</a>
+								<a href="news" class="footer__main-list-link">Новости</a>
+							</li>
+							<li class="footer__main-list-item">
+								<a href="vacancies" class="footer__main-list-link">Вакансии</a>
 							</li>
 							<li class="footer__main-list-item">
 								<a href="contacts" class="footer__main-list-link">Контакты</a>
