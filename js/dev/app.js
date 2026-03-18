@@ -3478,6 +3478,7 @@ function addToCart() {
         const addToCartImage = addToCartProduct.querySelector("[data-fls-addtocart-image]");
         const flyImgSpeed = +addToCartImage.dataset.flsAddtocartImage || 500;
         addToCartImage ? addToCartImageFly(addToCartImage, addToCart2, flyImgSpeed) : null;
+        targetElement.classList.add("_added");
         setTimeout(() => {
           addToCart2.innerHTML = +addToCart2.innerHTML + addToCartQuantity;
         }, addToCartImage ? flyImgSpeed : 0);
