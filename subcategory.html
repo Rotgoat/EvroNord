@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Евронорд :: Главная</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1773506486757"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1773506486757">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1773862862901"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1773862862901">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -333,11 +333,11 @@
 							<div class="category__main">
 								<div class="category__main-header">
 									<div class="category__main-header-sorting">
-										<select data-fls-select="" name="form[]" data-fls-select-modif="category__main-header-select">
-											<option value="1" selected>По обновлению</option>
-											<option value="2">По цене ▲</option>
-											<option value="3">По цене ▼</option>
-											<option value="4">По популярности</option>
+										<select data-fls-select="" data-fls-select-modif="category__main-header-select">
+											<option value="1" selected>По популярности</option>
+											<option value="2">По новизне</option>
+											<option value="3">Сначала дешевле</option>
+											<option value="4">Сначала дороже</option>
 										</select>
 									</div>
 									<div class="category__main-header-action">
@@ -385,7 +385,11 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<!-- добовляется класс _added когда добавили в корзину -->
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -409,7 +413,10 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -433,7 +440,10 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -473,7 +483,10 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -497,101 +510,10 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
-													</div>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="category__main-card category-card" data-fls-addtocart-product="">
-										<div class="category-card__header">
-											<a href="product" class="category-card__image">
-												<img src="./assets/img/catalog/01.jpg" data-fls-addtocart-image="" width="80" alt="Image">
-											</a>
-											<div class="category-card__text">
-												<a href="product" class="category-card__name">Наличник Exter Белый</a>
-												<div class="category-card__desc">
-													Небольшое описание при его наличии в системе около
-                                        двух строк
-												</div>
-											</div>
-										</div>
-										<div class="category-card__items">
-											<div class="category-card__item">
-												<div class="category-card__item-col">
-													<a href="product" class="category-card__subname">
-														Наличник Exter 38х10, 6м,
-                                            белый, Китай
-													</a>
-													<div class="category-card__pieces">100 шт</div>
-													<div class="category-card__price-block _sale">
-														<div class="category-card__price-old">
-															<span class="category-card__price-old-value">14.58 руб.</span>
-															<div class="category-card__sale-label">
-																<div class="category-card__sale-value">20%</div>
-															</div>
-														</div>
-														<div class="category-card__price">30.44 руб.</div>
-													</div>
-												</div>
-												<form class="category-card__item-col">
-													<div class="category-card__quantity quantity" data-fls-quantity="">
-														<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
-														<div class="quantity__input">
-															<input data-fls-quantity-value="" autocomplete="off" type="text" value="1">
-														</div>
-														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
-													</div>
-													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
-													</div>
-												</form>
-											</div>
-											<div class="category-card__item">
-												<div class="category-card__item-col">
-													<a href="product" class="category-card__subname">
-														Наличник Exter 38х10, 6м,
-                                            белый, Китай
-													</a>
-													<div class="category-card__pieces">100 шт</div>
-													<div class="category-card__price-block">
-														<div class="category-card__price">30.44 руб.</div>
-													</div>
-												</div>
-												<form class="category-card__item-col">
-													<div class="category-card__quantity quantity" data-fls-quantity="">
-														<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
-														<div class="quantity__input">
-															<input data-fls-quantity-value="" autocomplete="off" type="text" value="1">
-														</div>
-														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
-													</div>
-													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
-													</div>
-												</form>
-											</div>
-											<div class="category-card__item">
-												<div class="category-card__item-col">
-													<a href="product" class="category-card__subname">
-														Наличник Exter 38х10, 6м,
-                                            коричневый, Китай
-													</a>
-													<div class="category-card__pieces">100 шт</div>
-													<div class="category-card__price-block">
-														<div class="category-card__price">30.44 руб.</div>
-													</div>
-												</div>
-												<form class="category-card__item-col">
-													<div class="category-card__quantity quantity" data-fls-quantity="">
-														<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
-														<div class="quantity__input">
-															<input data-fls-quantity-value="" autocomplete="off" type="text" value="1">
-														</div>
-														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
-													</div>
-													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -637,7 +559,10 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -661,7 +586,10 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
@@ -685,7 +613,113 @@
 														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 													</div>
 													<div class="category-card__btn-wrapp">
-														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">В корзину</button>
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="category__main-card category-card" data-fls-addtocart-product="">
+										<div class="category-card__header">
+											<a href="product" class="category-card__image">
+												<img src="./assets/img/catalog/01.jpg" data-fls-addtocart-image="" width="80" alt="Image">
+											</a>
+											<div class="category-card__text">
+												<a href="product" class="category-card__name">Наличник Exter Белый</a>
+												<div class="category-card__desc">
+													Небольшое описание при его наличии в системе около
+                                        двух строк
+												</div>
+											</div>
+										</div>
+										<div class="category-card__items">
+											<div class="category-card__item">
+												<div class="category-card__item-col">
+													<a href="product" class="category-card__subname">
+														Наличник Exter 38х10, 6м,
+                                            белый, Китай
+													</a>
+													<div class="category-card__pieces">100 шт</div>
+													<div class="category-card__price-block _sale">
+														<div class="category-card__price-old">
+															<span class="category-card__price-old-value">14.58 руб.</span>
+															<div class="category-card__sale-label">
+																<div class="category-card__sale-value">20%</div>
+															</div>
+														</div>
+														<div class="category-card__price">30.44 руб.</div>
+													</div>
+												</div>
+												<form class="category-card__item-col">
+													<div class="category-card__quantity quantity" data-fls-quantity="">
+														<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+														<div class="quantity__input">
+															<input data-fls-quantity-value="" autocomplete="off" type="text" value="1">
+														</div>
+														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+													</div>
+													<div class="category-card__btn-wrapp">
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
+													</div>
+												</form>
+											</div>
+											<div class="category-card__item">
+												<div class="category-card__item-col">
+													<a href="product" class="category-card__subname">
+														Наличник Exter 38х10, 6м,
+                                            белый, Китай
+													</a>
+													<div class="category-card__pieces">100 шт</div>
+													<div class="category-card__price-block">
+														<div class="category-card__price">30.44 руб.</div>
+													</div>
+												</div>
+												<form class="category-card__item-col">
+													<div class="category-card__quantity quantity" data-fls-quantity="">
+														<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+														<div class="quantity__input">
+															<input data-fls-quantity-value="" autocomplete="off" type="text" value="1">
+														</div>
+														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+													</div>
+													<div class="category-card__btn-wrapp">
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
+													</div>
+												</form>
+											</div>
+											<div class="category-card__item">
+												<div class="category-card__item-col">
+													<a href="product" class="category-card__subname">
+														Наличник Exter 38х10, 6м,
+                                            коричневый, Китай
+													</a>
+													<div class="category-card__pieces">100 шт</div>
+													<div class="category-card__price-block">
+														<div class="category-card__price">30.44 руб.</div>
+													</div>
+												</div>
+												<form class="category-card__item-col">
+													<div class="category-card__quantity quantity" data-fls-quantity="">
+														<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+														<div class="quantity__input">
+															<input data-fls-quantity-value="" autocomplete="off" type="text" value="1">
+														</div>
+														<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+													</div>
+													<div class="category-card__btn-wrapp">
+														<button type="button" data-fls-addtocart-button="" class="category-card__btn btn btn--s">
+															В корзину
+															<span class="if-added --icon-thin-check"></span>
+														</button>
 													</div>
 												</form>
 											</div>
