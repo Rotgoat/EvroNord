@@ -377,6 +377,10 @@ html {
   display: flex;
   gap: 1.5rem;
 }
+.top-header__item.footer-menu-start {
+  padding-top: 1rem;
+  border-top: var(--ctr-divider-accent);
+}
 
 .main-header__container {
   display: grid;
@@ -4937,7 +4941,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .mobile-menu {
     position: fixed;
     width: 100%;
-    height: calc(100svh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
     left: -100%;
     top: var(--header-height);
     background-color: var(--bg-primary);
